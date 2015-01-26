@@ -1,0 +1,167 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'express@2.3.11',
+1 verbose cli   'ejs@0.4.3' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json websocket-whiteboard-example@1.0.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'express@2.3.11', null ]
+7 verbose cache add name=undefined spec="express@2.3.11" args=["express@2.3.11",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'express@2.3.11',
+8 verbose parsed url   path: 'express@2.3.11',
+8 verbose parsed url   href: 'express@2.3.11' }
+9 verbose cache add [ 'ejs@0.4.3', null ]
+10 verbose cache add name=undefined spec="ejs@0.4.3" args=["ejs@0.4.3",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'ejs@0.4.3',
+11 verbose parsed url   path: 'ejs@0.4.3',
+11 verbose parsed url   href: 'ejs@0.4.3' }
+12 verbose cache add name="express" spec="2.3.11" args=["express","2.3.11"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '2.3.11',
+13 verbose parsed url   path: '2.3.11',
+13 verbose parsed url   href: '2.3.11' }
+14 verbose addNamed [ 'express', '2.3.11' ]
+15 verbose addNamed [ '2.3.11', '2.3.11' ]
+16 verbose cache add name="ejs" spec="0.4.3" args=["ejs","0.4.3"]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: '0.4.3',
+17 verbose parsed url   path: '0.4.3',
+17 verbose parsed url   href: '0.4.3' }
+18 verbose addNamed [ 'ejs', '0.4.3' ]
+19 verbose addNamed [ '0.4.3', '0.4.3' ]
+20 silly lockFile 046ac06e-express-2-3-11 express@2.3.11
+21 verbose lock express@2.3.11 /Users/michaelgarrido/.npm/046ac06e-express-2-3-11.lock
+22 silly lockFile 3e0988a6-ejs-0-4-3 ejs@0.4.3
+23 verbose lock ejs@0.4.3 /Users/michaelgarrido/.npm/3e0988a6-ejs-0-4-3.lock
+24 verbose request where is /ejs
+25 verbose request registry https://registry.npmjs.org/
+26 verbose request id 4ca36536d1684704
+27 verbose url raw /ejs
+28 verbose url resolving [ 'https://registry.npmjs.org/', './ejs' ]
+29 verbose url resolved https://registry.npmjs.org/ejs
+30 verbose request where is https://registry.npmjs.org/ejs
+31 info trying registry request attempt 1 at 11:10:06
+32 http GET https://registry.npmjs.org/ejs
+33 verbose request where is /express
+34 verbose request registry https://registry.npmjs.org/
+35 verbose url raw /express
+36 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+37 verbose url resolved https://registry.npmjs.org/express
+38 verbose request where is https://registry.npmjs.org/express
+39 info trying registry request attempt 1 at 11:10:06
+40 verbose etag "CJVPYS0M2IC94YXWMW8MF8D2C"
+41 http GET https://registry.npmjs.org/express
+42 http 200 https://registry.npmjs.org/ejs
+43 silly registry.get cb [ 200,
+43 silly registry.get   { date: 'Sun, 25 Jan 2015 19:10:06 GMT',
+43 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+43 silly registry.get     etag: '"4DVFZ9J4HSZ636H03MOBFH9UN"',
+43 silly registry.get     'content-type': 'application/json',
+43 silly registry.get     'cache-control': 'max-age=60',
+43 silly registry.get     'content-length': '41919',
+43 silly registry.get     'accept-ranges': 'bytes',
+43 silly registry.get     via: '1.1 varnish',
+43 silly registry.get     age: '16',
+43 silly registry.get     'x-served-by': 'cache-sjc3130-SJC',
+43 silly registry.get     'x-cache': 'HIT',
+43 silly registry.get     'x-cache-hits': '1',
+43 silly registry.get     'x-timer': 'S1422213006.290573,VS0,VE0',
+43 silly registry.get     vary: 'Accept',
+43 silly registry.get     'keep-alive': 'timeout=10, max=50',
+43 silly registry.get     connection: 'Keep-Alive' } ]
+44 silly lockFile 838e4738-stry-npmjs-org-ejs-ejs-0-4-3-tgz https://registry.npmjs.org/ejs/-/ejs-0.4.3.tgz
+45 verbose lock https://registry.npmjs.org/ejs/-/ejs-0.4.3.tgz /Users/michaelgarrido/.npm/838e4738-stry-npmjs-org-ejs-ejs-0-4-3-tgz.lock
+46 verbose addRemoteTarball [ 'https://registry.npmjs.org/ejs/-/ejs-0.4.3.tgz',
+46 verbose addRemoteTarball   '8143c3656955b8934db5d9da83e9be73176f1f4f' ]
+47 info retry fetch attempt 1 at 11:10:06
+48 verbose fetch to= /var/folders/hk/zmrtgvy903n8xk0_mh4v_qtc0000gn/T/npm-8181-0HhTv7Gl/registry.npmjs.org/ejs/-/ejs-0.4.3.tgz
+49 http GET https://registry.npmjs.org/ejs/-/ejs-0.4.3.tgz
+50 http 200 https://registry.npmjs.org/ejs/-/ejs-0.4.3.tgz
+51 silly lockFile 838e4738-stry-npmjs-org-ejs-ejs-0-4-3-tgz https://registry.npmjs.org/ejs/-/ejs-0.4.3.tgz
+52 silly lockFile 838e4738-stry-npmjs-org-ejs-ejs-0-4-3-tgz https://registry.npmjs.org/ejs/-/ejs-0.4.3.tgz
+53 silly lockFile 3e0988a6-ejs-0-4-3 ejs@0.4.3
+54 silly lockFile 3e0988a6-ejs-0-4-3 ejs@0.4.3
+55 http 200 https://registry.npmjs.org/express
+56 silly registry.get cb [ 200,
+56 silly registry.get   { date: 'Sun, 25 Jan 2015 19:10:06 GMT',
+56 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+56 silly registry.get     etag: '"1FOC043YDGHUW9EN9I4H0IK41"',
+56 silly registry.get     'content-type': 'application/json',
+56 silly registry.get     'cache-control': 'max-age=60',
+56 silly registry.get     'content-length': '463664',
+56 silly registry.get     'accept-ranges': 'bytes',
+56 silly registry.get     via: '1.1 varnish',
+56 silly registry.get     age: '51',
+56 silly registry.get     'x-served-by': 'cache-sjc3125-SJC',
+56 silly registry.get     'x-cache': 'HIT',
+56 silly registry.get     'x-cache-hits': '1',
+56 silly registry.get     'x-timer': 'S1422213006.291181,VS0,VE1',
+56 silly registry.get     vary: 'Accept',
+56 silly registry.get     'keep-alive': 'timeout=10, max=50',
+56 silly registry.get     connection: 'Keep-Alive' } ]
+57 silly lockFile 5bc05586-s-org-express-express-2-3-11-tgz https://registry.npmjs.org/express/-/express-2.3.11.tgz
+58 verbose lock https://registry.npmjs.org/express/-/express-2.3.11.tgz /Users/michaelgarrido/.npm/5bc05586-s-org-express-express-2-3-11-tgz.lock
+59 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-2.3.11.tgz',
+59 verbose addRemoteTarball   '1dcd3a404332565a64c8290797e183707612f25a' ]
+60 info retry fetch attempt 1 at 11:10:07
+61 verbose fetch to= /var/folders/hk/zmrtgvy903n8xk0_mh4v_qtc0000gn/T/npm-8181-0HhTv7Gl/registry.npmjs.org/express/-/express-2.3.11.tgz
+62 http GET https://registry.npmjs.org/express/-/express-2.3.11.tgz
+63 http 200 https://registry.npmjs.org/express/-/express-2.3.11.tgz
+64 silly lockFile 5bc05586-s-org-express-express-2-3-11-tgz https://registry.npmjs.org/express/-/express-2.3.11.tgz
+65 silly lockFile 5bc05586-s-org-express-express-2-3-11-tgz https://registry.npmjs.org/express/-/express-2.3.11.tgz
+66 silly lockFile 046ac06e-express-2-3-11 express@2.3.11
+67 silly lockFile 046ac06e-express-2-3-11 express@2.3.11
+68 error Error: EACCES, mkdir '/Users/michaelgarrido/.npm/express/2.3.11'
+68 error  { [Error: EACCES, mkdir '/Users/michaelgarrido/.npm/express/2.3.11']
+68 error   errno: 3,
+68 error   code: 'EACCES',
+68 error   path: '/Users/michaelgarrido/.npm/express/2.3.11',
+68 error   parent: 'websocket-whiteboard-example' }
+69 error Please try running this command again as root/Administrator.
+70 error System Darwin 14.0.0
+71 error command "node" "/usr/local/bin/npm" "install" "express@2.3.11" "ejs@0.4.3"
+72 error cwd /Users/michaelgarrido/Desktop/WebSocket-Node-master/example/whiteboard
+73 error node -v v0.10.33
+74 error npm -v 1.4.28
+75 error path /Users/michaelgarrido/.npm/express/2.3.11
+76 error code EACCES
+77 error errno 3
+78 error stack Error: EACCES, mkdir '/Users/michaelgarrido/.npm/express/2.3.11'
+79 verbose exit [ 3, true ]
