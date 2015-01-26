@@ -11,7 +11,7 @@ var server = net.createServer(function (socket) {
   socket.pipe(socket);
 });
 
-server.listen(1337, "127.0.0.1", function() {
+server.listen(1339, "127.0.0.1", function() {
   address = server.address();
   console.log("opened server on %j", address);
 });

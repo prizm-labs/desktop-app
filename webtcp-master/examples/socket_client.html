@@ -18,14 +18,15 @@ var net = new WebTCP('localhost', 9999);
 // standard socket options
 options = {
   encoding: "utf-8",
-  timeout: 0,
+  timeout: 300,
   noDelay: true, // disable/enable Nagle algorithm
   keepAlive: false, //default is false
   initialDelay: 0 // for keepAlive. default is 0
 }
 
 // Create a socket. You can specify host and port of any TCP server here
-var socket = net.createSocket("127.0.0.1", 1337, options);
+var socket = net.createSocket("127.0.0.1", 1339, options);
+//var socket = net.createSocket("192.168.2.40", 1337 );
 
 // On connection callback
 socket.on('connect', function(){
@@ -42,7 +43,7 @@ socket.on('end', function(data) {
 });
 
 // Send data to the server
-socket.write("hello world"); 
+//socket.write("hello world"); 
 
 // To get socket options 
 // socket.getSockOpts();

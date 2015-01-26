@@ -4,6 +4,9 @@
 module.exports.clientEvents = function() {
   // trigger an event on a client side
   this.emitClientEvent = function(eventName, data) {
+
+    console.log('emitClientEvent'+eventName+' \n',data);
+
     var pck = this.createPacket();
     pck.eventName = eventName;
     pck.data = data;
@@ -18,11 +21,16 @@ module.exports.clientEvents = function() {
       buffer[i] = packet[i]
     }
 
+    console.log(buffer);
+
     return buffer
   }
 
   // process messages comming from a client
   this.onClientData = function(data) {
+
+    console.log('onClientData',data);
+
     // client can either send data or make a function call
     // TODO: whitelist allowed functions!
     if (data.command && typeof this[data.command] == "function") {

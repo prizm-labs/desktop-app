@@ -1,0 +1,14 @@
+{
+  "name": "best-practices",
+  "description": "A package using versioning best-practices",
+  "author": "Charlie Robbins <charlie@nodejitsu.com>",
+  "devDependencies": {
+    "sockjs": "0.3.3"
+  },
+  "dependencies": {
+    "sockjs": "0.3.3"
+  },
+  "engines": {
+    "node": "*"
+  }
+}

@@ -8,7 +8,8 @@ var clientEvents = require('./client_events.js').clientEvents;
 
 module.exports.Socket = function(webtcp, remoteSocketId, host, port, options) {
   // socket events that are mapped to client socket objects
-  var EVENTS = ["connect", "data", "end", "close", "timeout", "drain", "error"];
+  var EVENTS = ["connect", "end", "close", "timeout", "drain", "error"];
+  //var EVENTS = ["connect", "data", "end", "close", "timeout", "drain", "error"];
 
   // sockjs connection
   this.sockjsConn = webtcp.sockjsConn;
@@ -28,9 +29,9 @@ module.exports.Socket = function(webtcp, remoteSocketId, host, port, options) {
     timeout: options.timeout || 0,
 
     //Disables the Nagle algorithm
-    noDelay: options.noDelay || false, 
+    noDelay: options.noDelay || true, 
 
-    // keepAlive: options.keepAlive || false, 
+    keepAlive: options.keepAlive || true, 
 
     //Set the delay between the last data packet received and the first keepalive probe
     initialDelay: options.initialDelay || 0
@@ -52,6 +53,8 @@ module.exports.Socket = function(webtcp, remoteSocketId, host, port, options) {
       buffer[i] = packet.charCodeAt(i)
     }
 
+    console.log(buffer);
+
     return buffer
   }
 
@@ -63,9 +66,44 @@ module.exports.Socket = function(webtcp, remoteSocketId, host, port, options) {
     this.client.setKeepAlive(this.options.keepAlive, this.options.initialDelay);
   }
 
-  this.client = new net.Socket();
+  // custom Stream and Buffer
+
+  // var client = net.connect({host:this.remoteAddress,port:this.remotePort});
+
+  // client.on('data',function(chunk){
+  //   console.log('=============');
+  //   console.log('chunk \n',chunk.toString());
+  // })
+
+  //
+  var options = {
+    highWaterMark: 1, 
+    pauseOnCreate: true,
+    objectMode: true
+  };
+
+  this.client = new net.Socket(options);
+
+
+
   this.client.connect(this.remotePort, this.remoteAddress, function() { 
     self.setOptions();
+
+    self.client.on('readable', function(){
+      var chunk;
+
+      while (chunk = self.client.read(10)) {
+        console.log('c:'+chunk.length+':'+chunk.toString());
+
+        if (chunk === null) {
+          console.log('no bytes available to read');
+        }
+      }
+    });
+
+    self.client.on('disconnect', function(){
+
+    });
   });
 
   // map socket events to socket objects (on a browser side),
@@ -92,7 +130,7 @@ module.exports.Socket = function(webtcp, remoteSocketId, host, port, options) {
   this.mapEvents = function(events) {
     for(i in events) 
       this.mapEvent.call(this, events[i]);
-  }
+  } 
 
   this.mapEvents.call(this, EVENTS);
 
