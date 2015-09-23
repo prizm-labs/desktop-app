@@ -5,6 +5,8 @@
     "version": "1.0.0",
     "dependencies": {
         "express": "~2",
-        "ejs": "*"
+        "ejs": "*",
+        "lodash": "*",
+        "websocket": "*"
     }
 }
